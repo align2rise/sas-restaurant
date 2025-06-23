@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAS Restaurants - Pizza Hut | Order Online</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/customer-portal.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="customer-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="restaurant-info">
+                    <img src="https://logo.clearbit.com/pizzahut.com" alt="Pizza Hut" class="restaurant-logo">
+                    <div class="restaurant-meta">
+                        <h1>Pizza Hut - Downtown</h1>
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 4.8 (124 reviews)
+                        </div>
+                        <div class="status open">
+                            <i class="fas fa-circle"></i> Open - Closes at 11 PM
+                        </div>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-cart">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="customer-main">
+        <div class="container">
+            <!-- Menu Categories -->
+            <nav class="menu-categories">
+                <ul>
+                    <li class="active"><a href="#appetizers">Appetizers</a></li>
+                    <li><a href="#pizzas">Pizzas</a></li>
+                    <li><a href="#pastas">Pastas</a></li>
+                    <li><a href="#desserts">Desserts</a></li>
+                    <li><a href="#drinks">Drinks</a></li>
+                </ul>
+            </nav>
+
+            <!-- Menu Items Grid -->
+            <div class="menu-items">
+                <!-- Appetizers Section -->
+                <section id="appetizers" class="menu-section">
+                    <h2>Appetizers</h2>
+                    <div class="items-grid">
+                        <!-- Item 1 -->
+                        <div class="menu-item" data-id="1">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1552539618-7eec9b4d1796?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Garlic Bread">
+                                <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="item-details">
+                                <h3>Garlic Bread</h3>
+                                <p class="description">Freshly baked bread with garlic butter and herbs</p>
+                                <div class="price">$5.99</div>
+                                <button class="btn btn-add">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="menu-item" data-id="2">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Mozzarella Sticks">
+                                <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="item-details">
+                                <h3>Mozzarella Sticks</h3>
+                                <p class="description">Crispy fried mozzarella with marinara sauce</p>
+                                <div class="price">$6.99</div>
+                                <button class="btn btn-add">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pizzas Section -->
+                <section id="pizzas" class="menu-section">
+                    <h2>Pizzas</h2>
+                    <div class="items-grid">
+                        <!-- Item 3 -->
+                        <div class="menu-item" data-id="3">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Pepperoni Pizza">
+                                <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="item-details">
+                                <h3>Pepperoni Pizza</h3>
+                                <p class="description">Classic pizza with tomato sauce and extra pepperoni</p>
+                                <div class="price">$12.99</div>
+                                <div class="customize">
+                                    <label>Size:</label>
+                                    <select class="size-option">
+                                        <option value="small">Small (+$0)</option>
+                                        <option value="medium" selected>Medium (+$2)</option>
+                                        <option value="large">Large (+$4)</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-add">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="menu-item" data-id="4">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Margherita Pizza">
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                            <div class="item-details">
+                                <h3>Margherita Pizza</h3>
+                                <p class="description">Tomato sauce, fresh mozzarella, and basil</p>
+                                <div class="price">$11.99</div>
+                                <div class="customize">
+                                    <label>Size:</label>
+                                    <select class="size-option">
+                                        <option value="small">Small (+$0)</option>
+                                        <option value="medium" selected>Medium (+$2)</option>
+                                        <option value="large">Large (+$4)</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-add">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button class="btn-close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be added dynamically -->
+        </div>
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span class="subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Tax (8%)</span>
+                <span class="tax">$0.00</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total</span>
+                <span class="total-amount">$0.00</span>
+            </div>
+            <button class="btn btn-checkout">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Complete Your Order</h3>
+                <button class="btn-close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label>Table Number</label>
+                        <input type="text" placeholder="Enter table number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Special Instructions</label>
+                        <textarea placeholder="Any special requests?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content confirmation">
+            <div class="confirmation-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Order Placed Successfully!</h3>
+            <p>Your order #ORD-1257 has been received by the kitchen.</p>
+            <div class="order-summary">
+                <div class="summary-item">
+                    <span>Estimated Time:</span>
+                    <strong>20-25 minutes</strong>
+                </div>
+                <div class="summary-item">
+                    <span>Total:</span>
+                    <strong>$24.98</strong>
+                </div>
+            </div>
+            <button class="btn btn-done">Done</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/customer-portal.js"></script>
+</body>
+</html>

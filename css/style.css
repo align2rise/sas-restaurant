@@ -91,7 +91,7 @@ body {
 
 .sidebar-nav ul {
     list-style: none;
-    padding: 20px 0;
+    /* padding: 20px 0; */
 }
 
 .sidebar-nav li a {
@@ -804,4 +804,46 @@ body {
     .investment-details {
         grid-template-columns: 1fr;
     }
+}
+
+
+ /* Accordion Submenu Styles */
+ .has-submenu {
+    position: relative;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 20px;
+    background: rgba(0,0,0,0.05);
+}
+
+.has-submenu.active .submenu {
+    max-height: 500px; /* Adjust based on content */
+}
+
+.submenu-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-icon {
+    transition: transform 0.3s;
+    font-size: 0.8rem;
+}
+
+.has-submenu.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.submenu li a {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+.submenu li a i {
+    font-size: 0.8rem;
 }

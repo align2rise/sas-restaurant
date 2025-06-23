@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAS Restaurants - Restaurant Admin</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/restaurant-admin.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" data-aos="fade-right" data-aos-duration="800">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-utensils animated-logo"></i>
+                    <h1>SAS <span>Restaurants</span></h1>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurant-admin.html">
+                            <i class="fas fa-store"></i>
+                            <span>Restaurants Admin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="add-restaurant.html">
+                            <i class="fas fa-plus-circle"></i>
+                            <span>Add Restaurants</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admins.html">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Admins</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Customer Portal Accordion -->
+                    <li class="has-submenu">
+                        <a href="#" class="submenu-toggle">
+                            <i class="fas fa-users"></i>
+                            <span>Customer Portal</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="menu-browsing.html">
+                                    <i class="fas fa-book-open"></i>
+                                    <span>Menu Browsing</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="cart-checkout.html">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>Cart Checkout</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="order-status.html">
+                                    <i class="fas fa-clipboard-check"></i>
+                                    <span>Order Status</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="track-order.html">
+                                    <i class="fas fa-truck"></i>
+                                    <span>Order Tracker</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="menu-management.html">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>Menu Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="orders.html">
+                            <i class="fas fa-shopping-basket"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-reports.html">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Admin" class="profile-img">
+                    <div class="profile-info">
+                        <h4>Super Admin</h4>
+                        <small>admin@sasrestaurants.com</small>
+                    </div>
+                    <a href="#" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-title">
+                    <h2 data-aos="fade-down">Pizza Hut - Downtown Branch</h2>
+                   
+                </div>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">5</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <!-- Restaurant Overview -->
+                <div class="restaurant-overview" data-aos="fade-up">
+                    <div class="restaurant-header">
+                        <div class="restaurant-cover">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Restaurant Cover">
+                            <div class="restaurant-logo">
+                                <img src="https://logo.clearbit.com/pizzahut.com" alt="Restaurant Logo">
+                            </div>
+                        </div>
+                        <div class="restaurant-info">
+                            <h3>Pizza Hut - Downtown Branch</h3>
+                            <div class="restaurant-meta">
+                                <span class="rating"><i class="fas fa-star"></i> 4.8 (124 reviews)</span>
+                                <span class="type"><i class="fas fa-utensils"></i> Fast Food, Italian</span>
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> 123 Main St, New York, NY</span>
+                            </div>
+                            <div class="restaurant-status">
+                                <span class="badge open">Open</span>
+                                <span class="hours">Closes at 11:00 PM</span>
+                            </div>
+                            <div class="restaurant-actions">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-edit"></i> Edit Profile
+                                </button>
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-qrcode"></i> Manage QR
+                                </button>
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-power-off"></i> Close Restaurant
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="restaurant-tabs">
+                        <ul class="nav-tabs">
+                            <li class="active"><a href="#overview" data-tab="overview">Overview</a></li>
+                            <li><a href="#menu" data-tab="menu">Menu</a></li>
+                            <li><a href="#orders" data-tab="orders">Orders</a></li>
+                            <li><a href="#reviews" data-tab="reviews">Reviews</a></li>
+                            <li><a href="#staff" data-tab="staff">Staff</a></li>
+                            <li><a href="#settings" data-tab="settings">Settings</a></li>
+                        </ul>
+                        
+                        <div class="tab-content">
+                            <!-- Overview Tab -->
+                            <div id="overview" class="tab-pane active">
+                                <div class="overview-stats">
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="stat-info">
+                                            <h4>Today's Orders</h4>
+                                            <p>24</p>
+                                            <span class="trend up"><i class="fas fa-arrow-up"></i> 12% from yesterday</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-dollar-sign"></i>
+                                        </div>
+                                        <div class="stat-info">
+                                            <h4>Today's Revenue</h4>
+                                            <p>$1,245</p>
+                                            <span class="trend up"><i class="fas fa-arrow-up"></i> 8% from yesterday</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div class="stat-info">
+                                            <h4>Active Customers</h4>
+                                            <p>56</p>
+                                            <span class="trend down"><i class="fas fa-arrow-down"></i> 5% from yesterday</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div class="stat-info">
+                                            <h4>Avg. Preparation</h4>
+                                            <p>18 min</p>
+                                            <span class="trend up"><i class="fas fa-arrow-up"></i> 2 min from yesterday</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="overview-charts">
+                                    <div class="chart-card">
+                                        <div class="chart-header">
+                                            <h4>Orders This Week</h4>
+                                            <select class="chart-filter">
+                                                <option>This Week</option>
+                                                <option>Last Week</option>
+                                                <option>This Month</option>
+                                            </select>
+                                        </div>
+                                        <canvas id="ordersChart"></canvas>
+                                    </div>
+                                    
+                                    <div class="chart-card">
+                                        <div class="chart-header">
+                                            <h4>Revenue This Week</h4>
+                                            <select class="chart-filter">
+                                                <option>This Week</option>
+                                                <option>Last Week</option>
+                                                <option>This Month</option>
+                                            </select>
+                                        </div>
+                                        <canvas id="revenueChart"></canvas>
+                                    </div>
+                                </div>
+                                
+                                <div class="overview-items">
+                                    <div class="recent-orders">
+                                        <div class="section-header">
+                                            <h4>Recent Orders</h4>
+                                            <a href="#" class="view-all">View All</a>
+                                        </div>
+                                        <div class="orders-list">
+                                            <div class="order-item">
+                                                <div class="order-id">#ORD-1254</div>
+                                                <div class="order-customer">John Smith</div>
+                                                <div class="order-items">3 items</div>
+                                                <div class="order-amount">$45.99</div>
+                                                <div class="order-status preparing">Preparing</div>
+                                                <div class="order-time">25 min ago</div>
+                                                <div class="order-actions">
+                                                    <button class="btn btn-sm btn-primary">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="order-item">
+                                                <div class="order-id">#ORD-1253</div>
+                                                <div class="order-customer">Sarah Johnson</div>
+                                                <div class="order-items">2 items</div>
+                                                <div class="order-amount">$32.50</div>
+                                                <div class="order-status ready">Ready</div>
+                                                <div class="order-time">42 min ago</div>
+                                                <div class="order-actions">
+                                                    <button class="btn btn-sm btn-primary">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="order-item">
+                                                <div class="order-id">#ORD-1252</div>
+                                                <div class="order-customer">Michael Brown</div>
+                                                <div class="order-items">5 items</div>
+                                                <div class="order-amount">$78.25</div>
+                                                <div class="order-status delivered">Delivered</div>
+                                                <div class="order-time">1 hour ago</div>
+                                                <div class="order-actions">
+                                                    <button class="btn btn-sm btn-primary">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="order-item">
+                                                <div class="order-id">#ORD-1251</div>
+                                                <div class="order-customer">Emily Davis</div>
+                                                <div class="order-items">1 item</div>
+                                                <div class="order-amount">$15.99</div>
+                                                <div class="order-status cancelled">Cancelled</div>
+                                                <div class="order-time">2 hours ago</div>
+                                                <div class="order-actions">
+                                                    <button class="btn btn-sm btn-primary">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="popular-items">
+                                        <div class="section-header">
+                                            <h4>Popular Menu Items</h4>
+                                            <a href="#" class="view-all">View All</a>
+                                        </div>
+                                        <div class="items-list">
+                                            <div class="menu-item">
+                                                <div class="item-rank">1</div>
+                                                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Pepperoni Pizza" class="item-image">
+                                                <div class="item-info">
+                                                    <h5>Pepperoni Pizza</h5>
+                                                    <p>Large, Classic</p>
+                                                </div>
+                                                <div class="item-stats">
+                                                    <span class="orders">24 orders</span>
+                                                    <span class="revenue">$287.76</span>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="menu-item">
+                                                <div class="item-rank">2</div>
+                                                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Margherita Pizza" class="item-image">
+                                                <div class="item-info">
+                                                    <h5>Margherita Pizza</h5>
+                                                    <p>Medium, Classic</p>
+                                                </div>
+                                                <div class="item-stats">
+                                                    <span class="orders">18 orders</span>
+                                                    <span class="revenue">$215.82</span>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="menu-item">
+                                                <div class="item-rank">3</div>
+                                                <img src="https://images.unsplash.com/photo-1552539618-7eec9b4d1796?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Garlic Bread" class="item-image">
+                                                <div class="item-info">
+                                                    <h5>Garlic Bread</h5>
+                                                    <p>With cheese</p>
+                                                </div>
+                                                <div class="item-stats">
+                                                    <span class="orders">15 orders</span>
+                                                    <span class="revenue">$89.85</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Menu Tab (Content would be loaded dynamically) -->
+                            <div id="menu" class="tab-pane">
+                                <div class="tab-placeholder">
+                                    <i class="fas fa-clipboard-list"></i>
+                                    <h4>Menu Management</h4>
+                                    <p>Manage your restaurant menu items, categories and pricing</p>
+                                    <a href="menu-management.html" class="btn btn-primary">Go to Menu Management</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Orders Tab (Content would be loaded dynamically) -->
+                            <div id="orders" class="tab-pane">
+                                <div class="tab-placeholder">
+                                    <i class="fas fa-shopping-basket"></i>
+                                    <h4>Order Management</h4>
+                                    <p>View and manage incoming orders from customers</p>
+                                    <a href="orders.html" class="btn btn-primary">Go to Orders</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Reviews Tab (Content would be loaded dynamically) -->
+                            <div id="reviews" class="tab-pane">
+                                <div class="tab-placeholder">
+                                    <i class="fas fa-star"></i>
+                                    <h4>Customer Reviews</h4>
+                                    <p>View and respond to customer feedback and ratings</p>
+                                    <a href="#" class="btn btn-primary">View All Reviews</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Staff Tab (Content would be loaded dynamically) -->
+                            <div id="staff" class="tab-pane">
+                                <div class="tab-placeholder">
+                                    <i class="fas fa-users"></i>
+                                    <h4>Staff Management</h4>
+                                    <p>Manage your restaurant staff members and permissions</p>
+                                    <a href="#" class="btn btn-primary">Manage Staff</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Settings Tab (Content would be loaded dynamically) -->
+                            <div id="settings" class="tab-pane">
+                                <div class="tab-placeholder">
+                                    <i class="fas fa-cog"></i>
+                                    <h4>Restaurant Settings</h4>
+                                    <p>Configure your restaurant settings and preferences</p>
+                                    <a href="#" class="btn btn-primary">Go to Settings</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/restaurant-admin.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: true
+        });
+
+        // Orders Chart
+        const ordersCtx = document.getElementById('ordersChart').getContext('2d');
+        const ordersChart = new Chart(ordersCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Orders',
+                    data: [12, 19, 15, 24, 18, 22, 17],
+                    backgroundColor: 'rgba(75, 192, 192, 0.7)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            display: true,
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+
+        // Revenue Chart
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        const revenueChart = new Chart(revenueCtx, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Revenue',
+                    data: [450, 720, 580, 1245, 890, 1050, 820],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            display: true,
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+
+            // Accordion functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const submenuToggles = document.querySelectorAll('.submenu-toggle');
+        
+        submenuToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const parent = this.parentElement;
+                parent.classList.toggle('active');
+                
+                // Close other open submenus if needed
+                document.querySelectorAll('.has-submenu').forEach(item => {
+                    if (item !== parent && item.classList.contains('active')) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+        
+        // Menu toggle for mobile
+        const menuToggle = document.getElementById('menuToggle');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                document.querySelector('.sidebar').classList.toggle('collapsed');
+            });
+        }
+    });
+    </script>
+</body>
+</html>

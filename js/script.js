@@ -121,4 +121,33 @@ document.addEventListener('DOMContentLoaded', function() {
     notificationDropdown.addEventListener('click', function(e) {
         e.stopPropagation();
     });
+
+
+    // Accordion functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const submenuToggles = document.querySelectorAll('.submenu-toggle');
+        
+        submenuToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const parent = this.parentElement;
+                parent.classList.toggle('active');
+                
+                // Close other open submenus if needed
+                document.querySelectorAll('.has-submenu').forEach(item => {
+                    if (item !== parent && item.classList.contains('active')) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+        
+        // Menu toggle for mobile
+        const menuToggle = document.getElementById('menuToggle');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                document.querySelector('.sidebar').classList.toggle('collapsed');
+            });
+        }
+    });
 });

@@ -1,0 +1,604 @@
+/* Restaurant Admin Page Specific Styles */
+.restaurant-overview {
+    background: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+.restaurant-header {
+    position: relative;
+}
+
+.restaurant-cover {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.restaurant-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.restaurant-logo {
+    position: absolute;
+    bottom: -50px;
+    left: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.restaurant-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.restaurant-info {
+    padding: 30px 30px 20px 150px;
+}
+
+.restaurant-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.restaurant-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.restaurant-meta span {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--gray-color);
+}
+
+.restaurant-meta i {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.restaurant-meta .rating i {
+    color: var(--warning-color);
+}
+
+.restaurant-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.restaurant-status .badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.restaurant-status .badge.open {
+    background: rgba(76, 201, 240, 0.1);
+    color: var(--success-color);
+}
+
+.restaurant-status .badge.closed {
+    background: rgba(247, 37, 133, 0.1);
+    color: var(--danger-color);
+}
+
+.restaurant-status .hours {
+    font-size: 14px;
+    color: var(--gray-color);
+}
+
+.restaurant-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid transparent;
+}
+
+.btn i {
+    font-size: 14px;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+}
+
+.btn-secondary {
+    background: #f0f0f0;
+    color: var(--dark-color);
+    border-color: #e0e0e0;
+}
+
+.btn-secondary:hover {
+    background: #e0e0e0;
+}
+
+.btn-danger {
+    background: rgba(247, 37, 133, 0.1);
+    color: var(--danger-color);
+    border-color: rgba(247, 37, 133, 0.2);
+}
+
+.btn-danger:hover {
+    background: rgba(247, 37, 133, 0.2);
+}
+
+/* Restaurant Tabs */
+.restaurant-tabs {
+    margin-top: 20px;
+}
+
+.nav-tabs {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 30px;
+}
+
+.nav-tabs li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.nav-tabs li a {
+    display: block;
+    padding: 15px 5px;
+    color: var(--gray-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border-bottom: 2px solid transparent;
+}
+
+.nav-tabs li.active a {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.nav-tabs li a:hover {
+    color: var(--primary-color);
+}
+
+.tab-content {
+    padding: 20px 30px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-placeholder {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.tab-placeholder i {
+    font-size: 50px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.tab-placeholder h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tab-placeholder p {
+    color: var(--gray-color);
+    margin-bottom: 20px;
+}
+
+/* Overview Stats */
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(67, 97, 238, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.stat-info h4 {
+    font-size: 14px;
+    color: var(--gray-color);
+    margin-bottom: 5px;
+}
+
+.stat-info p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.stat-info .trend {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.trend i {
+    margin-right: 3px;
+    font-size: 10px;
+}
+
+.trend.up {
+    color: var(--success-color);
+}
+
+.trend.down {
+    color: var(--danger-color);
+}
+
+/* Overview Charts */
+.overview-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.chart-card {
+    background: var(--white-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chart-header h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.chart-filter select {
+    padding: 5px 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.chart-filter select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Recent Orders */
+.overview-items {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.view-all {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+.orders-list {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.order-item {
+    display: grid;
+    grid-template-columns: 100px 1fr 80px 80px 100px 100px 50px;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-id {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.order-customer {
+    font-weight: 500;
+}
+
+.order-amount {
+    font-weight: 600;
+}
+
+.order-status {
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.order-status.preparing {
+    background: rgba(248, 150, 30, 0.1);
+    color: var(--warning-color);
+}
+
+.order-status.ready {
+    background: rgba(76, 201, 240, 0.1);
+    color: var(--success-color);
+}
+
+.order-status.delivered {
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--primary-color);
+}
+
+.order-status.cancelled {
+    background: rgba(247, 37, 133, 0.1);
+    color: var(--danger-color);
+}
+
+.order-time {
+    color: var(--gray-color);
+    font-size: 13px;
+}
+
+/* Popular Items */
+.popular-items {
+    background: var(--white-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.items-list {
+    display: grid;
+    gap: 15px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: rgba(67, 97, 238, 0.03);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.menu-item:hover {
+    background: rgba(67, 97, 238, 0.1);
+}
+
+.item-rank {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.menu-item:nth-child(2) .item-rank {
+    background: var(--accent-color);
+}
+
+.menu-item:nth-child(3) .item-rank {
+    background: var(--success-color);
+}
+
+.item-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.item-info h5 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.item-info p {
+    font-size: 12px;
+    color: var(--gray-color);
+}
+
+.item-stats {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 12px;
+}
+
+.item-stats .orders {
+    color: var(--gray-color);
+}
+
+.item-stats .revenue {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .overview-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .restaurant-info {
+        padding-left: 30px;
+        padding-top: 70px;
+    }
+    
+    .restaurant-logo {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: auto;
+        top: -50px;
+    }
+    
+    .nav-tabs {
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+    
+    .nav-tabs li {
+        white-space: nowrap;
+    }
+    
+    .order-item {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+    }
+    
+    .order-actions {
+        grid-column: span 2;
+        text-align: right;
+    }
+}
+
+@media (max-width: 768px) {
+    .overview-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .overview-charts {
+        grid-template-columns: 1fr;
+    }
+    
+    .restaurant-actions {
+        flex-direction: column;
+    }
+    
+    .restaurant-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .overview-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .restaurant-cover {
+        height: 180px;
+    }
+    
+    .restaurant-logo {
+        width: 80px;
+        height: 80px;
+        top: -40px;
+    }
+    
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stat-info .trend {
+        justify-content: center;
+    }
+    
+    .order-item {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-actions {
+        grid-column: span 1;
+    }
+}

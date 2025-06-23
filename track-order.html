@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Your Order</title>
+  <link rel="stylesheet" href="./css/track-styles.css">
+</head>
+<body>
+  <div class="tracking-container">
+    <h1>Track Your Order</h1>
+    
+    <div class="search-box">
+      <input type="text" id="orderIdInput" placeholder="Enter Order ID">
+      <button id="trackBtn">Track</button>
+    </div>
+
+    <div class="tracking-card" id="trackingResults">
+      <!-- Dynamic content will load here -->
+      <div class="default-message">
+        <p>Enter your order ID to track shipment status.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="track-script.js"></script>
+</body>
+</html>

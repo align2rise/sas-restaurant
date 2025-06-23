@@ -1,0 +1,182 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .tracking-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .search-box button {
+    padding: 12px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .search-box button:hover {
+    background: #2980b9;
+  }
+  
+  .tracking-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 200px;
+  }
+  
+  .default-message {
+    text-align: center;
+    color: #7f8c8d;
+    padding: 40px 0;
+  }
+  
+  /* Tracking Progress Styles */
+  .tracking-active {
+    display: block;
+  }
+  
+  .tracking-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .order-id {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .tracking-status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    background: #e3f2fd;
+    color: #1976d2;
+  }
+  
+  .progress-container {
+    margin: 25px 0;
+  }
+  
+  .progress-bar {
+    height: 6px;
+    background: #ecf0f1;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: #27ae60;
+    width: 50%; /* Dynamic value */
+    transition: width 0.5s;
+  }
+  
+  .progress-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .progress-step {
+    text-align: center;
+    width: 25%;
+    position: relative;
+  }
+  
+  .step-indicator {
+    width: 16px;
+    height: 16px;
+    background: #bdc3c7;
+    border-radius: 50%;
+    margin: 0 auto 5px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .step-indicator.active {
+    background: #27ae60;
+    border: 3px solid #d5f5e3;
+  }
+  
+  .step-label {
+    font-size: 12px;
+    color: #95a5a6;
+  }
+  
+  .step-label.active {
+    color: #2c3e50;
+    font-weight: bold;
+  }
+  
+  .tracking-events {
+    margin-top: 25px;
+  }
+  
+  .event {
+    display: flex;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    border-left: 2px solid #3498db;
+  }
+  
+  .event:last-child {
+    border-left-color: transparent;
+  }
+  
+  .event-dot {
+    width: 12px;
+    height: 12px;
+    background: #3498db;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  
+  .event-content {
+    flex: 1;
+  }
+  
+  .event-time {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-bottom: 3px;
+  }
+  
+  .event-message {
+    font-size: 14px;
+  }
